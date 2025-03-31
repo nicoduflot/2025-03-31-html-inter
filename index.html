@@ -1,10 +1,12 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Formation HTML CSS RWD</title>
 </head>
+
 <body>
     <header>
         <h1>Formation HTML CSS</h1>
@@ -19,9 +21,56 @@
             <nav>
                 <b>Table des matières</b>
                 <ol type="I">
-                    <li><a href="" title=""></a></li>
+                    <li><a href="#les-balises-de-contenu-de-texte" title="Balises texte">Les balises de contenu de
+                            texte</a></li>
+                    <li><a href="#les-balises-d-apparence-de-texte" title="Mise en forme texte">Les balises d'apparence
+                            de texte</a></li>
+                    <li><a href="#les-problemes-courants-en-CSS" title="Problèmes CSS">Les problèmes courants en CSS</a>
+                    </li>
+                    <li><a href="#le-css-adaptatif" title="CSS adaptatif">Le CSS adaptatif</a></li>
+                    <li><a href="#les-positions" title="Positions CSS">Les positions</a></li>
                 </ol>
             </nav>
+        </section>
+        <section>
+            <article>
+                <header>
+                    <h2>Les balises de contenu de texte</h2>
+                    <p>
+                        Les textes doivent normalement toujours être encadrés par des balises qui affichent normalement du texte, comme des paragraphes, mais aussi de blocs de citations, des listes, etc.
+                    </p>
+                </header>
+                <h3>Les paragraphes</h3>
+                <p>
+                    Les paragraphes séparent naturellement les blocs de texte en vertical, mais s'il y a besoin d'un retour chariot au sein d'un paragraphe : <br />
+                    <code>&lt;br /&gt;</code> <br/> 
+                    La balise "br" permet donc un retour chariot dans un paragraphe.
+                </p>
+                <h3>Les listes</h3>
+                <p>
+                    Les listes sont équivalentes aux paragraphe dans la hièrarchie des balises. Il faut donc les déclarer à l'extérieur des paragraphes
+                </p>
+                <ul>
+                    <li>élément de liste</li>
+                    <li>élément de liste</li>
+                    <li>élément de liste
+                        <ul>
+                            <li>élément de sous-liste</li>
+                            <li>élément de sous-liste
+                                <ul>
+                                    <li>élément de sous-sous-liste</li>
+                                    <li>élément de sous-sous-liste</li>
+                                </ul>
+                            </li>
+                            <li>élément de sous-liste</li>
+                        </ul>
+                    </li>
+                    <li>élément de liste</li>
+                </ul>
+                <footer>
+                    <a href="#">Lire plus</a>
+                </footer>
+            </article>
         </section>
     </main>
     <footer>
@@ -32,4 +81,5 @@
         </div>
     </footer>
 </body>
+
 </html>
