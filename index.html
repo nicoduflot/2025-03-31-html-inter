@@ -50,6 +50,7 @@
                 <p>
                     Les listes sont équivalentes aux paragraphe dans la hièrarchie des balises. Il faut donc les déclarer à l'extérieur des paragraphes
                 </p>
+                <h4>Listes non ordonnées</h4>
                 <ul>
                     <li>élément de liste</li>
                     <li>élément de liste</li>
@@ -67,6 +68,57 @@
                     </li>
                     <li>élément de liste</li>
                 </ul>
+                <h4>Les listes ordonnées</h4>
+                <ol type="I">
+                    <li>élément de liste</li>
+                    <li>élément de liste</li>
+                    <li>élément de liste
+                        <ol type="A">
+                            <li>élément de sous-liste</li>
+                            <li>élément de sous-liste
+                                <ol>
+                                    <li>élément de sous-sous-liste</li>
+                                    <li>élément de sous-sous-liste</li>
+                                </ol>
+                            </li>
+                            <li>élément de sous-liste</li>
+                        </ol>
+                    </li>
+                    <li>élément de liste</li>
+                </ol>
+                <p>
+                    Maintenant, blablabla, continuons la liste
+                </p>
+                <ol type="I" start="5">
+                    <li>élément de liste</li>
+                </ol>
+                <h3>Les citations</h3>
+                <blockquote>
+                    <p>
+                        La balise <code>&lt;blockquote&gt;</code> met en exergue son contenu, en appliquant des marges extérieurs à gauche et à droite.
+                    </p>
+                </blockquote>
+                <p>
+                    Mais pour une citation sémantiquement propre pour le référencement et aussi les normes d'écriture du HTML, il est fortement conseillé d'utiliser les balises de citations suivantes en complément : <br />
+                    <code>&lt;cite&gt;</code> et <code>&lt;q&gt;</code>
+                </p>
+                <blockquote>
+                    <p>
+                        <q cite="https://fr.wikiquote.org/wiki/Terry_Pratchett#Au_guet_!,_1989">Si les clichés deviennent des clichés, c'est qu'ils sont les marteaux et les tournevis dans la boîte à outils de la communication.</q>
+                    </p>
+                    <p>
+                        <cite>Au guet ! (1989), Terry Pratchette (trad. Patrick Couton), éd. L'Atalante, 1997</cite>
+                    </p>
+                </blockquote>
+                <p>
+                    Le bloc de texte qui suis n'est a utiliser qu'en des très très rares occasions :<code>&lt;pre&gt;</code>
+                </p>
+                <pre>
+|||||
+q-.-p
+ \o/
+                </pre>
+                <h3>Les tableaux HTML</h3>
                 <footer>
                     <a href="#">Lire plus</a>
                 </footer>
