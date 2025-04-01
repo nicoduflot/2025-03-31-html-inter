@@ -35,7 +35,7 @@
         <section>
             <article>
                 <header>
-                    <h2>Les balises de contenu de texte</h2>
+                    <h2 id="les-balises-de-contenu-de-texte">Les balises de contenu de texte</h2>
                     <p>
                         Les textes doivent normalement toujours être encadrés par des balises qui affichent normalement du texte, comme des paragraphes, mais aussi de blocs de citations, des listes, etc.
                     </p>
@@ -119,6 +119,116 @@ q-.-p
  \o/
                 </pre>
                 <h3>Les tableaux HTML</h3>
+                <table>
+                    <caption>Exemple de tableau</caption>
+                    <thead>
+                        <tr>
+                            <th>Colonne 1</th>
+                            <th>Colonne 2</th>
+                            <th>Colonne 3</th>
+                            <th>Colonne 4</th>
+                            <th>Colonne 5</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td colspan="2">1 - 1</td>
+                            <td rowspan="2">1 - 2</td>
+                            <td>1 - 3</td>
+                            <td>1 - 4</td>
+                            <!-- <td>1 - 5</td> -->
+                        </tr>
+                        <tr>
+                            <td>2 - 1</td>
+                            <td>2 - 2</td>
+                            <td>2 - 3</td>
+                            <td>2 - 4</td>
+                            <!-- <td>2 - 5</td>  -->
+                        </tr>
+                        <tr>
+                            <td colspan="2" rowspan="2">3 - 1</td>
+                            <td>3 - 2</td>
+                            <td>3 - 3</td>
+                            <td>3 - 4</td>
+                            <!-- <td>3 - 5</td> -->
+                        </tr>
+                        <tr>
+                            <td>4 - 1</td>
+                            <td>4 - 2</td>
+                            <td>4 - 3</td>
+                            <!-- <td>4 - 4</td>
+                            <td>4 - 5</td> -->
+                        </tr>
+                    </tbody>
+                    <tfoot>
+                        <tr>
+                            <th>Colonne 1</th>
+                            <th>Colonne 2</th>
+                            <th>Colonne 3</th>
+                            <th>Colonne 4</th>
+                            <th>Colonne 5</th>
+                        </tr>
+                    </tfoot>
+                </table>
+                <footer>
+                    <a href="#">Lire plus</a>
+                </footer>
+            </article>
+            <article>
+                <header>
+                    <h2 id="les-balises-d-apparence-de-texte">
+                        Les balises d'apparence de texte
+                    </h2>
+                </header>
+                <p>
+                    Dans les premières version du HTYML, il existait la balise <code>&lt;font&gt;</code> qui permettait de changer <font size="6" face="impact" color="darkred">la taille, la police et la couleur d'une section de texte.</font> Mais cette balise n'est plus dans les norme HTML, désormais pour ce genre de manipulation, on créera des classes CSS, qui seront utilisées ponctuellement pour décorer au besoin des section de texte.
+                </p>
+                <p>
+                    On utilise le plus souvent la balise <code>&lt;span&gt;</code>, qui recevra la classe pour changer <span class="rougeImpactGrand">l'apparence du texte</span>.
+                </p>
+                <style>
+                    /*
+                    commentaire en CSS
+                    déclarer du css sur une balise : 
+                    baliseHTML{
+                        propriété css a changer: valeur de la propriété
+                    }
+
+                    changer la police de caractère de tous les éléments enfants de body
+                    body{
+                        font-family: Arial;
+                    }
+
+                    pour déclarer du CSS dans une classe a appliquer à n'importe quel élément
+                    .nomDeLaClasse{}
+                    
+                    pour déclarer du CSS pour un élément avec un id
+                    #idElement{}
+
+                    Applique du CSS à un élément ayant l'id les-balises-d-apparence-de-texte
+                    #les-balises-d-apparence-de-texte{}
+                    */
+                    .rougeImpactGrand{
+                        font-family: impact;
+                        font-size: 32px;
+                        color:darkred;
+                    }
+                </style>
+                <p>
+                    Une surface de 45m<sup>2</sup>, H<sub>2</sub>O. <br />
+                    H<sub>2</sub>SO<sub>4</sub><sup>2-</sup>.
+                </p>
+                <p>
+                    Il est possible de directement <small>réduire la taille</small> d'une portion de texte avec la balise <code>&lt;small&gt;</code>
+                </p>
+                <p>
+                    Pour mettre en gras ou en italique, il existe pour chacun des cas deux balises. Les balise qui ne serve qu'à attirer l'attention du lecteur sont <code>&lt;b&gt;</code> pour le <b>gras</b> et <code>&lt;i&gt;</code> pour <i>l'italique</i>.<br />
+                    Pour attirer l'attention du lecteur ET signifier une importance sémantique qui impacte le référencement, on utilisera <code>&lt;strong&gt;</code> <strong>pour le gras et l'importance sémantique sur la force du terme</strong> et <code>&lt;em&gt;</code> pour <em>l'italique et ajouter de l'emphase à la sémantique du terme</em>.
+                </p>
+                <p>
+                    A la base, le HTML servait principalement pour l'impression directe de son contenu, c'est pour cela qu'il est toujours possible de <u>souligner</u>, de <s>biffer</s> ou de <mark>surligner au fluo du texte</mark>.<br />
+                    On ne souligne jamais en HTML, car les utilisateurs pourraient pense qu'il s'agit d'un hyperlien, et ils pourraient pense qu'il s'agit d'un lien cassé.
+                </p>
                 <footer>
                     <a href="#">Lire plus</a>
                 </footer>
