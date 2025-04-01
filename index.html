@@ -5,6 +5,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Formation HTML CSS RWD</title>
+    <link rel="stylesheet" href="./css/style.css" />
 </head>
 
 <body>
@@ -229,6 +230,76 @@ q-.-p
                     A la base, le HTML servait principalement pour l'impression directe de son contenu, c'est pour cela qu'il est toujours possible de <u>souligner</u>, de <s>biffer</s> ou de <mark>surligner au fluo du texte</mark>.<br />
                     On ne souligne jamais en HTML, car les utilisateurs pourraient pense qu'il s'agit d'un hyperlien, et ils pourraient pense qu'il s'agit d'un lien cassé.
                 </p>
+                <footer>
+                    <a href="#">Lire plus</a>
+                </footer>
+            </article>
+            <article>
+                <header>
+                    <h2 id="les-problemes-courants-en-CSS">Les problèmes courants en CSS</h2>
+                </header>
+                <h3>Les polices à empâtement</h3>
+                <p>
+                    En web, pour l'accessibilité et la facilité de lecture, on évote les polices dites <q>à empâtement</q> (Times New Roman, verdana, serif). On préférera les polices sans empâtement, car plus faciles à lire surtout sur les écrans rétro-éclairés (Arial, helvetica, Roboto ou sans-serif).
+                </p>
+                <p>
+                    De plus, pour rendre la lecture des texte plus confortable, il convient d'augmenter la taille de base des polices ainsi que l'interligne.
+                </p>
+                <p>
+                    Créons notre premier feuillet de style, associons le à nos pages et allons gérer ces premiers points.
+                </p>
+                <h3>Em vs Rem</h3>
+                <div class="deuxEm">
+                    deux em
+                    <div class="deuxEm">
+                        deux em
+                    </div>
+                </div>
+                <div class="deuxRem">
+                    deux rem
+                    <div class="deuxRem">
+                        deux rem
+                    </div>
+                </div>
+                <h3>Les tailles des boîtes</h3>
+                <div class="content-box">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore non est similique esse cupiditate, laborum consequuntur ut libero. Architecto quaerat earum eligendi accusamus labore maxime corrupti numquam eaque, commodi ullam!
+                </div>
+                <div class="border-box">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem consequuntur molestias at voluptates dicta quo et odit! Porro voluptatum voluptatibus, sunt praesentium illum, in aliquam iusto sequi assumenda, minima accusantium.
+                </div>
+                <footer>
+                    <a href="#">Lire plus</a>
+                </footer>
+            </article>
+            <article>
+                <header>
+                    <h2 id="le-css-adaptatif">Le CSS adaptatif</h2>
+                </header>
+                <h3>Les media-queries</h3>
+                <p>
+                    Les media queries permettent de surcharger ou d'ajouter des comportements CSS par rapport, entre
+                autres, à l'affichage du site sur l'appareil : largeur d'affichage (viewport), l'orientation (portrait ou paysage).
+                </p>
+                <h3>La flexibilité : dispaly flex</h3>
+                <div class="exemple-display-flex">
+                    <div class="div-flex">toto</div>
+                    <div class="div-flex">toto</div>
+                    <div class="div-flex">toto</div>
+                    <div class="div-flex">toto</div>
+                    <div class="div-flex">toto</div>
+                    <div class="div-flex">toto</div>
+                    <div class="div-flex">toto</div>
+                    <div class="div-flex">toto</div>
+                    <div class="div-flex">toto</div>
+                    <div class="div-flex">toto</div>
+                    <div class="div-flex">toto</div>
+                    <div class="div-flex">toto</div>
+                    <div class="div-flex">toto</div>
+                    <div class="div-flex">toto</div>
+                    <div class="div-flex">toto</div>
+                    <div class="div-flex">toto</div>
+                </div>
                 <footer>
                     <a href="#">Lire plus</a>
                 </footer>
