@@ -114,73 +114,189 @@ sélecteur CSS :
 */
 
 /* déclarations générales */
-:root{
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 1.1rem;
-    line-height: 1.8rem;
-    scroll-behavior: smooth;
-    --gutter: 0.25rem;
+:root {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1.1rem;
+  line-height: 1.8rem;
+  scroll-behavior: smooth;
+  --gutter: 0.5rem;
+  --site-banner-bg-color: #333333;
+  --site-banner-color: white;
+  --site-banner-link-color: orange;
+  --site-main-link-color: darkred;
 }
 /* le sélecteur * correspond à n'importe quel suite de caractères, donc représente tous les sélecteurs de la page, donc impacte tous les élements présents dans la page */
-*{
-    box-sizing: border-box;
+* {
+  box-sizing: border-box;
+}
+/* on enlève la décoration de texte à TOUS les liens de la page */
+a {
+  text-decoration: none;
+}
+/* 
+on ajoute la décoration de lien au survol (:hover) 
+sauf aux liens de la navigation enfant direct de body ( :not(body > nav a) ) 
+*/
+a:hover:not(body > nav a) {
+  text-decoration: underline;
 }
 
 /* déclaration de classes */
 
-.deuxEm{
-    font-size: 2em;
+.deuxEm {
+  font-size: 2em;
 }
 
-.deuxRem{
-    font-size: 2rem;
+.deuxRem {
+  font-size: 2rem;
 }
 
-.content-box{
-    box-sizing: content-box;
-    width: 200px;
-    padding: 5px;
-    border-width: 2px;
-    border-style: solid;
-    border-color: darkred;
+.content-box {
+  box-sizing: content-box;
+  width: 200px;
+  padding: 5px;
+  border-width: 2px;
+  border-style: solid;
+  border-color: darkred;
 }
 
-.border-box{
-    box-sizing: border-box;
-    width: 200px;
-    padding: 5px;
-    border-width: 2px;
-    border-style: solid;
-    border-color: darkred;
+.border-box {
+  box-sizing: border-box;
+  width: 200px;
+  padding: 5px;
+  border-width: 2px;
+  border-style: solid;
+  border-color: darkred;
 }
 
-.go-top{
-    font-size: 2rem;
-    opacity: 0.5;
-    position: fixed;
-    right: 0.5rem;
-    bottom: 0.5rem;
+.go-top {
+  font-size: 2rem;
+  opacity: 0.5;
+  position: fixed;
+  right: 0.5rem;
+  bottom: 0.5rem;
 }
 
-.tableau-adaptatif{
-    overflow: auto;
+.tableau-adaptatif {
+  overflow: auto;
 }
 
 /* Déclarations de structure */
 
-body{
-    margin: 0;
+body {
+  margin: 0;
 }
 
 body > header,
 body > nav,
-body > footer{
-    background-color: #333333;
-    padding: var(--gutter);
+body > footer {
+  background-color: var(--site-banner-bg-color);
+  color: var(--site-banner-color);
+  padding: var(--gutter);
+}
+
+body > nav ul {
+  list-style-type: none;
+  padding: 0;
 }
 
 body > header > *,
 body > nav > *,
-body > footer > *{
-    margin: 0;
+body > footer > * {
+  margin: 0;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+body > header a,
+body > nav a,
+body > footer a {
+  color: var(--site-banner-link-color);
+}
+
+main a, /* tous les liens présents dans le bloc main */
+.go-top a /* dans un bloc ayant la classe go-top, tous les liens présent dans ce bloc */ {
+  color: var(--site-main-link-color);
+}
+
+main {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+article,
+nav.tdm {
+  padding: var(--gutter);
+}
+
+/* media queries */
+
+@media (min-width: 576px) {
+  main,
+  body > header > *,
+  body > nav > *,
+  body > footer > * {
+    width: 540px;
+  }
+}
+
+@media (min-width: 768px) {
+  main,
+  body > header > *,
+  body > nav > *,
+  body > footer > * {
+    width: 720px;
+  }
+}
+
+@media (min-width: 992px) {
+  main,
+  body > header > *,
+  body > nav > *,
+  body > footer > * {
+    width: 960px;
+  }
+
+  section{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  section > *:not(section > *.w-100) {
+    width: 50%;
+  }
+
+}
+
+@media (min-width: 1200px) {
+  main,
+  body > header > *,
+  body > nav > *,
+  body > footer > * {
+    width: 1140px;
+  }
+}
+
+@media (min-width: 1400px) {
+  main,
+  body > header > *,
+  body > nav > *,
+  body > footer > * {
+    width: 1320px;
+  }
+
+  section > *:not(section > *.w-100) {
+    width: 33.33333%;
+  }
+}
+
+@media (min-width: 1600px) {
+  main,
+  body > header > *,
+  body > nav > *,
+  body > footer > * {
+    width: 1560px;
+  }
 }
