@@ -29,6 +29,88 @@ vw & vh =>  vw : viewport width (largeur de la surface d'affichage du site)
             si la largeur d'affichage du site 360px (100vw)
             50vw = 180px
 
+sélecteur CSS :
+    ATTENTION : en CSS, on impacte tous les éléments correspondants aux sélecteurs écrits
+    
+    sélecteurs simples : balise, identifiant et par classe
+        p                   => tous les éléments p rencontrés dans le document
+                            pas de caractère spécial devant l'élément donc il s'agit d'une balise
+        #special            => l'élément ayant comme attribut id="special"
+                            le caractère # indique qu'on se réfère à l'id
+                            #Les-balises-de-contenu-texte{}
+                            => les id sont uniques dans la page
+        .titreDeChapitre    => les éléments ayant au moins la class="titreDeChapitre" 
+                            le caractère . indique qu'on se réfère à une classe
+                            => ATTENTION : si un élément class="titreDeChapitre toto tata" comme il possède au moins
+                            la classe titreDeChapitre alors il sera trouvé
+    Sélecteur avancés : selon les attributs                                  
+        [data-test]                     => les éléments ayant au moins un attribut nommé data-test
+                                        <span data-test="tata"></span>
+                                        <span data-test="toto"></span>
+                                        => les deux sont impacté, on ne recherche que l'attribut
+        [alt]                           => les éléments ayant au moins un attribut alt
+        [data-test="toto"]              => les éléments ayant au moins un attribut nommé data-test="toto"
+                                        <span data-test="tata"></span> => ça ne marche pas, la valeur de test est tata
+                                        <span data-test="toto"></span> => ça fonctionne car la valeur de test et toto
+                                        seul l'élément dont l'attribut data-test est égal à toto sera impacté
+        [data-col][data-line]           => les éléments ayant au moins un attribut data-col ET un attribut data-line
+        [data-col="3"][data-line]       => les éléments ayant au moins un attribut data-col="3" ET un attribut data-line
+        [data-col][data-line="2"]       => les éléments ayant au moins un attribut data-col ET un attribut data-line="2"
+        [data-col="3"][data-line="2"]   => les éléments ayant au moins un attribut data-col="3" ET un attribut data-line="2"
+
+    Sélecteur avancés : mélange des sélecteurs simples et ou de sélecteurs avancés
+
+        h3.titreDeChapitre  => tous les titre h3 ayant la classe titreDeChapitre <h3 class="titreDeChapitre"></h3>
+                            si l'élément et la classe sont collés, c'est que l'élément doit avoir au moins cette classe
+        article #special    => un élément avec id="special" enfant direct OU indirect d'un élément article
+                            si l'élément et l'id recherché sont séparés, cela indique une filiation directe ou indirecte
+                            <article>
+                                <div>
+                                    <div id="special"></div>
+                                </div>
+                            </article>
+
+                            <article>
+                                <div id="special"></div>
+                            </article>
+
+                            <article>
+                                <div>
+                                    <div>
+                                        <div id="special"></div>
+                                    </div>
+                                </div>
+                            </article>
+
+        article > p            => tous les éléments p enfants directs d'un élément article
+                            le chevron fermant > entre les deux éléments indique une filiation directe.
+                            <article>
+                                <p>P est lenfant direct de article, ça marche</p>
+                            </article>
+
+                            /!\ ça ne marche pas : 
+                            <article>
+                                <div>
+                                    <p>p a au moins une balise entre lui et article : ça ne marche pas</p>
+                                </div>
+                            </article>
+        p#special           => un élément p avec id="special"
+        .toto.tata          => un élément ayant au moins les deux classes suivantes toto et tata
+        .toto .tata         => un élément ayant au moins la classe tata enfant direct ou indirect d'un élément ayant au moins la classe toto
+    
+    
+    Pseudo sélecteurs (sélécteur qui permet des "tri" ou des "filtres" sur des sélecteurs )
+
+        p:nth-of-type(odd)  => tous les paragraphes du document en position impaire
+                            nth-child() le(s) nième(s) enfant(s)
+                            les paramètres : 
+                                odd => impaire - event => paire, Xn => tous les X enfants , Y => le Yème
+                                Xn + Y, si X == 2 et Y == 1 ==> 2n+1
+
+        article:last-child:nth-of-type(4n+3)    => l'article doit être le dernier article et le troisième article d'une ligne de 4
+                                                paramètres :    4n => le nombre d'élément par ligne
+                                                                +3 => le troisième de la ligne
+
 */
 
 /* déclarations générales */
@@ -37,6 +119,7 @@ vw & vh =>  vw : viewport width (largeur de la surface d'affichage du site)
     font-size: 1.1rem;
     line-height: 1.8rem;
     scroll-behavior: smooth;
+    --gutter: 0.25rem;
 }
 /* le sélecteur * correspond à n'importe quel suite de caractères, donc représente tous les sélecteurs de la page, donc impacte tous les élements présents dans la page */
 *{
@@ -77,4 +160,27 @@ vw & vh =>  vw : viewport width (largeur de la surface d'affichage du site)
     position: fixed;
     right: 0.5rem;
     bottom: 0.5rem;
+}
+
+.tableau-adaptatif{
+    overflow: auto;
+}
+
+/* Déclarations de structure */
+
+body{
+    margin: 0;
+}
+
+body > header,
+body > nav,
+body > footer{
+    background-color: #333333;
+    padding: var(--gutter);
+}
+
+body > header > *,
+body > nav > *,
+body > footer > *{
+    margin: 0;
 }
