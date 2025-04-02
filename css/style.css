@@ -70,3 +70,11 @@ vw & vh =>  vw : viewport width (largeur de la surface d'affichage du site)
     border-style: solid;
     border-color: darkred;
 }
+
+.go-top{
+    font-size: 2rem;
+    opacity: 0.5;
+    position: fixed;
+    right: 0.5rem;
+    bottom: 0.5rem;
+}
