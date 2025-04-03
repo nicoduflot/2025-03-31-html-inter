@@ -141,7 +141,8 @@ a:hover:not(body > nav a) {
   text-decoration: underline;
 }
 
-img{
+img,
+video{
   max-width: 100%;
 }
 

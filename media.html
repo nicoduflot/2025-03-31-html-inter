@@ -137,7 +137,37 @@
                 </footer>
             </article>
             <article>
-                
+                <header>
+                    <h2 id="les-video-hebergees">Intégrer les fichiers vidéos</h2>
+                </header>
+                <figure>
+                    <video controls muted id="video">
+                        <source src="./media/video/Fallout-4-Launch-Trailer.mp4" />
+                    </video>
+                    <figcaption>
+                        <p>
+                            <button id="playVideo" data-target="video" style="font-size: 2rem;">
+                                <i class="bi bi-play-fill"></i>
+                            </button>
+                            <button id="plauseVideo" data-target="video" style="font-size: 2rem;">
+                                <i class="bi bi-pause-fill"></i>
+                            </button>
+                        </p>
+                        <script>
+                            const playV = document.getElementById('playVideo');
+                            const pauseV = document.getElementById('plauseVideo');
+                            playV.addEventListener('click', function(){
+                                document.getElementById(playV.dataset.target).play();
+                            });
+                            pauseV.addEventListener('click', function(){
+                                document.getElementById(pauseV.dataset.target).pause();
+                            });
+                        </script>
+                    </figcaption>
+                </figure>
+                <footer>
+                    <a href="#">Lire plus</a>
+                </footer>
             </article>
         </section>
     </main>
