@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Formation HTML CSS RWD</title>
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/bootstrap-icons.css" />
+</head>
+
+<body id="top">
+    <header>
+        <h1>Formation HTML CSS</h1>
+        <p class="slogan">
+            Comprendre les bases HTML - CSS
+        </p>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="./index.html" title="Retour à l'accueil du site" target=""><i
+                        class="bi bi-house-door-fill"></i> Accueil</a></li>
+            <li><a href="./media.html" title="Cours sur les images" target=""><i class="bi bi-film"></i> Media</a></li>
+            <li><a href="./contact.html" title="Cours sur les formumaires" target=""><i
+                        class="bi bi-envelope-paper"></i> Contact</a></li>
+        </ul>
+    </nav>
+    <main>
+        <section>
+            <nav class="tdm">
+                <b>Table des matières</b>
+                <ol type="I">
+                    <li><a href="#les-images" title="Les images">Afficher des images</a></li>
+                    <li><a href="#l-audio-heberge" title="Les fichiers audio">Intégrer les fichiers audio</a></li>
+                    <li><a href="#l-audio-integre" title="L'audio partagé par des sites">Intégrer de l'audio partagé</a>
+                    </li>
+                    <li><a href="#les-video-hebergees" title="Les fichiers vidéos">Intégrer les fichiers vidéos</a></li>
+                    <li><a href="#les-video-partagees" title="Les vidéos partagées par des sites">Intégrer de la vidéo partagée</a></li>
+                </ol>
+            </nav>
+        </section>
+        <section>
+            <article class="w-100">
+                <header>
+                    <h2 id="les-images">Afficher les images</h2>
+                </header>
+                <p>
+                    Les images peuvent être affichées à l'aide de la balise <code>img</code> ET <code>picture</code>
+                </p>
+                <p>
+                    img est une balise qui va chercher la source (image) là où elle est stockée (selon le chemin indiqué dans l'attribut <code>src</code>) et elle affiche cette source là où img est déclaré (écrite, placée sur la page). <img src="./images/james-white-composite-200w.png" alt="Image composite de différentes oeuvres de James White" title="Mini galerie des oeuvres de James White, graphiste au style Synthwave, disponible sur son site signalnoise" />, les images sont en display "inline", c'est-à-dire qu'elle suivra le flux du contenu qui la précéde et qui la suivra.
+                </p>
+                <p>
+                    img peut être déclarée dans et hors paragraphe
+                </p>
+                <img src="./images/cropped-wallhaven-fallout-4-01-3-1536x922.jpg" alt="" />
+                <p>
+                    Pour bien référencer une image, il convient de lui ajouter une légende. Cette légende, associé à l'image et ces deux éléments mis dans un conteneur approprié vont permettre de créer une "entité sémantique", qui liera l'image, son texte alternatif, sa description du title et sa légende en un ensemble pertinent pour le référencement.
+                </p>
+                <figure>
+                    <img src="./images/diablo_02.jpg" alt="Impression écran du jeu vidéo Diablo, le personnage se trouve sur la place du village de Tristram, à côté du puis" />
+                    <figcaption>
+                        Image tirée du jeu vidéo Diablo, hack 'n' slash, édité par Blizard sorti en 1997
+                    </figcaption>
+                </figure>
+                <figure>
+                    <img src="./images/doc-signal-394w.png" alt="Portrait graphique du D. Emmet brown" /><br />
+                    <figcaption>
+                        James White a produit quelques protrait d'icônes de la pop culture, typique des années 80, ici il s'agit de Doc Brown, de la série de film "retour vers le futur"
+                    </figcaption>
+                </figure>
+                <footer>
+                    <a href="#">Lire plus</a>
+                </footer>
+            </article>
+        </section>
+    </main>
+    <footer>
+        <p>
+            &copy; Dawan 2024
+        </p>
+    </footer>
+    <div class="go-top">
+        <a href="#top" title="revenir en haut">
+            <i class="bi bi-arrow-up-square-fill"></i>
+        </a>
+    </div>
+</body>
+
+</html>

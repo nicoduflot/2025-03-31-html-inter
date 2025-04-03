@@ -19,6 +19,8 @@
     <nav>
         <ul>
             <li><a href="./index.html" title="Retour à l'accueil du site" target=""><i class="bi bi-house-door-fill"></i> Accueil</a></li>
+            <li><a href="./media.html" title="Cours sur les images" target=""><i class="bi bi-film"></i> Media</a></li>
+            <li><a href="./contact.html" title="Cours sur les formumaires" target=""><i class="bi bi-envelope-paper"></i> Contact</a></li>
         </ul>
     </nav>
     <main>
@@ -42,18 +44,21 @@
                 <header>
                     <h2 id="les-balises-de-contenu-de-texte">Les balises de contenu de texte</h2>
                     <p>
-                        Les textes doivent normalement toujours être encadrés par des balises qui affichent normalement du texte, comme des paragraphes, mais aussi de blocs de citations, des listes, etc.
+                        Les textes doivent normalement toujours être encadrés par des balises qui affichent normalement
+                        du texte, comme des paragraphes, mais aussi de blocs de citations, des listes, etc.
                     </p>
                 </header>
                 <h3>Les paragraphes</h3>
                 <p>
-                    Les paragraphes séparent naturellement les blocs de texte en vertical, mais s'il y a besoin d'un retour chariot au sein d'un paragraphe : <br />
-                    <code>&lt;br /&gt;</code> <br/> 
+                    Les paragraphes séparent naturellement les blocs de texte en vertical, mais s'il y a besoin d'un
+                    retour chariot au sein d'un paragraphe : <br />
+                    <code>&lt;br /&gt;</code> <br />
                     La balise "br" permet donc un retour chariot dans un paragraphe.
                 </p>
                 <h3>Les listes</h3>
                 <p>
-                    Les listes sont équivalentes aux paragraphe dans la hièrarchie des balises. Il faut donc les déclarer à l'extérieur des paragraphes
+                    Les listes sont équivalentes aux paragraphe dans la hièrarchie des balises. Il faut donc les
+                    déclarer à l'extérieur des paragraphes
                 </p>
                 <h4>Listes non ordonnées</h4>
                 <ul>
@@ -107,23 +112,29 @@
                 </header>
                 <blockquote>
                     <p>
-                        La balise <code>&lt;blockquote&gt;</code> met en exergue son contenu, en appliquant des marges extérieurs à gauche et à droite.
+                        La balise <code>&lt;blockquote&gt;</code> met en exergue son contenu, en appliquant des marges
+                        extérieurs à gauche et à droite.
                     </p>
                 </blockquote>
                 <p>
-                    Mais pour une citation sémantiquement propre pour le référencement et aussi les normes d'écriture du HTML, il est fortement conseillé d'utiliser les balises de citations suivantes en complément : <br />
+                    Mais pour une citation sémantiquement propre pour le référencement et aussi les normes d'écriture du
+                    HTML, il est fortement conseillé d'utiliser les balises de citations suivantes en complément :
+                    <br />
                     <code>&lt;cite&gt;</code> et <code>&lt;q&gt;</code>
                 </p>
                 <blockquote>
                     <p>
-                        <q cite="https://fr.wikiquote.org/wiki/Terry_Pratchett#Au_guet_!,_1989">Si les clichés deviennent des clichés, c'est qu'ils sont les marteaux et les tournevis dans la boîte à outils de la communication.</q>
+                        <q cite="https://fr.wikiquote.org/wiki/Terry_Pratchett#Au_guet_!,_1989">Si les clichés
+                            deviennent des clichés, c'est qu'ils sont les marteaux et les tournevis dans la boîte à
+                            outils de la communication.</q>
                     </p>
                     <p>
                         <cite>Au guet ! (1989), Terry Pratchette (trad. Patrick Couton), éd. L'Atalante, 1997</cite>
                     </p>
                 </blockquote>
                 <p>
-                    Le bloc de texte qui suis n'est a utiliser qu'en des très très rares occasions :<code>&lt;pre&gt;</code>
+                    Le bloc de texte qui suis n'est a utiliser qu'en des très très rares occasions
+                    :<code>&lt;pre&gt;</code>
                 </p>
                 <pre>
 |||||
@@ -132,57 +143,57 @@ q-.-p
                 </pre>
                 <h3>Les tableaux HTML</h3>
                 <div class="tableau-adaptatif">
-                <table>
-                    <caption>Exemple de tableau</caption>
-                    <thead>
-                        <tr>
-                            <th>Colonne 1</th>
-                            <th>Colonne 2</th>
-                            <th>Colonne 3</th>
-                            <th>Colonne 4</th>
-                            <th>Colonne 5</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td colspan="2">1 - 1</td>
-                            <td rowspan="2">1 - 2</td>
-                            <td>1 - 3</td>
-                            <td>1 - 4</td>
-                            <!-- <td>1 - 5</td> -->
-                        </tr>
-                        <tr>
-                            <td>2 - 1</td>
-                            <td>2 - 2</td>
-                            <td>2 - 3</td>
-                            <td>2 - 4</td>
-                            <!-- <td>2 - 5</td>  -->
-                        </tr>
-                        <tr>
-                            <td colspan="2" rowspan="2">3 - 1</td>
-                            <td>3 - 2</td>
-                            <td>3 - 3</td>
-                            <td>3 - 4</td>
-                            <!-- <td>3 - 5</td> -->
-                        </tr>
-                        <tr>
-                            <td>4 - 1</td>
-                            <td>4 - 2</td>
-                            <td>4 - 3</td>
-                            <!-- <td>4 - 4</td>
+                    <table>
+                        <caption>Exemple de tableau</caption>
+                        <thead>
+                            <tr>
+                                <th>Colonne 1</th>
+                                <th>Colonne 2</th>
+                                <th>Colonne 3</th>
+                                <th>Colonne 4</th>
+                                <th>Colonne 5</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td colspan="2">1 - 1</td>
+                                <td rowspan="2">1 - 2</td>
+                                <td>1 - 3</td>
+                                <td>1 - 4</td>
+                                <!-- <td>1 - 5</td> -->
+                            </tr>
+                            <tr>
+                                <td>2 - 1</td>
+                                <td>2 - 2</td>
+                                <td>2 - 3</td>
+                                <td>2 - 4</td>
+                                <!-- <td>2 - 5</td>  -->
+                            </tr>
+                            <tr>
+                                <td colspan="2" rowspan="2">3 - 1</td>
+                                <td>3 - 2</td>
+                                <td>3 - 3</td>
+                                <td>3 - 4</td>
+                                <!-- <td>3 - 5</td> -->
+                            </tr>
+                            <tr>
+                                <td>4 - 1</td>
+                                <td>4 - 2</td>
+                                <td>4 - 3</td>
+                                <!-- <td>4 - 4</td>
                             <td>4 - 5</td> -->
-                        </tr>
-                    </tbody>
-                    <tfoot>
-                        <tr>
-                            <th>Colonne 1</th>
-                            <th>Colonne 2</th>
-                            <th>Colonne 3</th>
-                            <th>Colonne 4</th>
-                            <th>Colonne 5</th>
-                        </tr>
-                    </tfoot>
-                </table>
+                            </tr>
+                        </tbody>
+                        <tfoot>
+                            <tr>
+                                <th>Colonne 1</th>
+                                <th>Colonne 2</th>
+                                <th>Colonne 3</th>
+                                <th>Colonne 4</th>
+                                <th>Colonne 5</th>
+                            </tr>
+                        </tfoot>
+                    </table>
                 </div>
                 <footer>
                     <a href="#">Lire plus</a>
@@ -195,10 +206,15 @@ q-.-p
                     </h2>
                 </header>
                 <p>
-                    Dans les premières version du HTYML, il existait la balise <code>&lt;font&gt;</code> qui permettait de changer <font size="6" face="impact" color="darkred">la taille, la police et la couleur d'une section de texte.</font> Mais cette balise n'est plus dans les norme HTML, désormais pour ce genre de manipulation, on créera des classes CSS, qui seront utilisées ponctuellement pour décorer au besoin des section de texte.
+                    Dans les premières version du HTYML, il existait la balise <code>&lt;font&gt;</code> qui permettait
+                    de changer <font size="6" face="impact" color="darkred">la taille, la police et la couleur d'une
+                        section de texte.</font> Mais cette balise n'est plus dans les norme HTML, désormais pour ce
+                    genre de manipulation, on créera des classes CSS, qui seront utilisées ponctuellement pour décorer
+                    au besoin des section de texte.
                 </p>
                 <p>
-                    On utilise le plus souvent la balise <code>&lt;span&gt;</code>, qui recevra la classe pour changer <span class="rougeImpactGrand">l'apparence du texte</span>.
+                    On utilise le plus souvent la balise <code>&lt;span&gt;</code>, qui recevra la classe pour changer
+                    <span class="rougeImpactGrand">l'apparence du texte</span>.
                 </p>
                 <style>
                     /*
@@ -222,10 +238,10 @@ q-.-p
                     Applique du CSS à un élément ayant l'id les-balises-d-apparence-de-texte
                     #les-balises-d-apparence-de-texte{}
                     */
-                    .rougeImpactGrand{
+                    .rougeImpactGrand {
                         font-family: impact;
                         font-size: 32px;
-                        color:darkred;
+                        color: darkred;
                     }
                 </style>
                 <p>
@@ -233,15 +249,24 @@ q-.-p
                     H<sub>2</sub>SO<sub>4</sub><sup>2-</sup>.
                 </p>
                 <p>
-                    Il est possible de directement <small>réduire la taille</small> d'une portion de texte avec la balise <code>&lt;small&gt;</code>
+                    Il est possible de directement <small>réduire la taille</small> d'une portion de texte avec la
+                    balise <code>&lt;small&gt;</code>
                 </p>
                 <p>
-                    Pour mettre en gras ou en italique, il existe pour chacun des cas deux balises. Les balise qui ne serve qu'à attirer l'attention du lecteur sont <code>&lt;b&gt;</code> pour le <b>gras</b> et <code>&lt;i&gt;</code> pour <i>l'italique</i>.<br />
-                    Pour attirer l'attention du lecteur ET signifier une importance sémantique qui impacte le référencement, on utilisera <code>&lt;strong&gt;</code> <strong>pour le gras et l'importance sémantique sur la force du terme</strong> et <code>&lt;em&gt;</code> pour <em>l'italique et ajouter de l'emphase à la sémantique du terme</em>.
+                    Pour mettre en gras ou en italique, il existe pour chacun des cas deux balises. Les balise qui ne
+                    serve qu'à attirer l'attention du lecteur sont <code>&lt;b&gt;</code> pour le <b>gras</b> et
+                    <code>&lt;i&gt;</code> pour <i>l'italique</i>.<br />
+                    Pour attirer l'attention du lecteur ET signifier une importance sémantique qui impacte le
+                    référencement, on utilisera <code>&lt;strong&gt;</code> <strong>pour le gras et l'importance
+                        sémantique sur la force du terme</strong> et <code>&lt;em&gt;</code> pour <em>l'italique et
+                        ajouter de l'emphase à la sémantique du terme</em>.
                 </p>
                 <p>
-                    A la base, le HTML servait principalement pour l'impression directe de son contenu, c'est pour cela qu'il est toujours possible de <u>souligner</u>, de <s>biffer</s> ou de <mark>surligner au fluo du texte</mark>.<br />
-                    On ne souligne jamais en HTML, car les utilisateurs pourraient pense qu'il s'agit d'un hyperlien, et ils pourraient pense qu'il s'agit d'un lien cassé.
+                    A la base, le HTML servait principalement pour l'impression directe de son contenu, c'est pour cela
+                    qu'il est toujours possible de <u>souligner</u>, de <s>biffer</s> ou de <mark>surligner au fluo du
+                        texte</mark>.<br />
+                    On ne souligne jamais en HTML, car les utilisateurs pourraient pense qu'il s'agit d'un hyperlien, et
+                    ils pourraient pense qu'il s'agit d'un lien cassé.
                 </p>
                 <footer>
                     <a href="#">Lire plus</a>
@@ -253,13 +278,17 @@ q-.-p
                 </header>
                 <h3>Les polices à empâtement</h3>
                 <p>
-                    En web, pour l'accessibilité et la facilité de lecture, on évote les polices dites <q>à empâtement</q> (Times New Roman, verdana, serif). On préférera les polices sans empâtement, car plus faciles à lire surtout sur les écrans rétro-éclairés (Arial, helvetica, Roboto ou sans-serif).
+                    En web, pour l'accessibilité et la facilité de lecture, on évote les polices dites <q>à
+                        empâtement</q> (Times New Roman, verdana, serif). On préférera les polices sans empâtement, car
+                    plus faciles à lire surtout sur les écrans rétro-éclairés (Arial, helvetica, Roboto ou sans-serif).
                 </p>
                 <p>
-                    De plus, pour rendre la lecture des texte plus confortable, il convient d'augmenter la taille de base des polices ainsi que l'interligne.
+                    De plus, pour rendre la lecture des texte plus confortable, il convient d'augmenter la taille de
+                    base des polices ainsi que l'interligne.
                 </p>
                 <p>
-                    Créons notre premier feuillet de style, associons le à nos pages et allons gérer ces premiers points.
+                    Créons notre premier feuillet de style, associons le à nos pages et allons gérer ces premiers
+                    points.
                 </p>
                 <h3>Em vs Rem</h3>
                 <div class="deuxEm">
@@ -279,7 +308,8 @@ q-.-p
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore non est similique esse cupiditate!
                 </div>
                 <div class="border-box">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem consequuntur molestias at voluptates dicta quo et odit!
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem consequuntur molestias at voluptates
+                    dicta quo et odit!
                 </div>
                 <footer>
                     <a href="#">Lire plus</a>
@@ -292,12 +322,13 @@ q-.-p
                 <h3>Les media-queries</h3>
                 <p>
                     Les media queries permettent de surcharger ou d'ajouter des comportements CSS par rapport, entre
-                autres, à l'affichage du site sur l'appareil : largeur d'affichage (viewport), l'orientation (portrait ou paysage).
+                    autres, à l'affichage du site sur l'appareil : largeur d'affichage (viewport), l'orientation
+                    (portrait ou paysage).
                 </p>
                 <h3>La flexibilité : dispaly flex</h3>
                 <style>
                     /* le css suivant sert a illustrer la partie display flex */
-                    .exemple-display-flex{
+                    .exemple-display-flex {
                         /*
                         border-width: 1px;
                         border-style: solid;
@@ -316,31 +347,32 @@ q-.-p
                         justify-content: space-between;
                     }
 
-                    .div-flex{
+                    .div-flex {
                         border: 1px solid black;
                         height: 75px;
                         width: 100%;
                         margin: var(--gutter);
                         padding: var(--gutter);
                     }
+
                     /* il faut maintenant déterminer ce qu'on des "points de rupture" */
 
                     /* on va utiliser les média queries pour déterminer des largeur d'affichage à l'écran qui servirons de point de rupture et permettront de changer l'apparence et la disposition des éléments dans le conteneur */
-                    @media(min-width: 700px){
-                        .div-flex{
-                            width: calc( 50% - ( 2 * var(--gutter) ) );
+                    @media(min-width: 700px) {
+                        .div-flex {
+                            width: calc(50% - (2 * var(--gutter)));
                         }
                     }
 
-                    @media(min-width: 1000px){
-                        .div-flex{
-                            width: calc( 33.33333% - ( 2 * var(--gutter) ) );
+                    @media(min-width: 1000px) {
+                        .div-flex {
+                            width: calc(33.33333% - (2 * var(--gutter)));
                         }
                     }
 
-                    @media(min-width: 1200px){
-                        .div-flex{
-                            width: calc( 25% - ( 2 * var(--gutter) ) );
+                    @media(min-width: 1200px) {
+                        .div-flex {
+                            width: calc(25% - (2 * var(--gutter)));
                         }
                     }
                 </style>
@@ -371,7 +403,8 @@ q-.-p
                     <h2 id="les-positions">Les positions</h2>
                 </header>
                 <p>
-                    La propriété position permet d'afficher à l'écran des éléments ailleurs que là où ils sont déclarés dans le fichier HTML.
+                    La propriété position permet d'afficher à l'écran des éléments ailleurs que là où ils sont déclarés
+                    dans le fichier HTML.
                 </p>
                 <p>
                     les valeurs :
@@ -381,47 +414,83 @@ q-.-p
                         static : par défaut pour les éléments
                     </li>
                     <li>
-                        Relative : l'élément est à sa position déclarée mais peut être décalé à l'aide des propriétés de type top, bottom, le décalage n'a pas d'impact sur les éléments suivants
+                        Relative : l'élément est à sa position déclarée mais peut être décalé à l'aide des propriétés de
+                        type top, bottom, le décalage n'a pas d'impact sur les éléments suivants
                     </li>
                     <li>
-                        absolute : l'élément n'a plus de "contenance", les éléments suivants passeront "au travers" ou "en-dessous". Les propriétés de type top, bottomm... le placeront par rapport à son élément parent
+                        absolute : l'élément n'a plus de "contenance", les éléments suivants passeront "au travers" ou
+                        "en-dessous". Les propriétés de type top, bottomm... le placeront par rapport à son élément
+                        parent
                     </li>
                     <li>
-                        fixed : l'élément n'a plus de "contenance", les éléments suivants passeront "au travers" ou "en-dessous". Il est positionné par rapport au viewport et ne bougera pas quel que soit le défilement de la page.
+                        fixed : l'élément n'a plus de "contenance", les éléments suivants passeront "au travers" ou
+                        "en-dessous". Il est positionné par rapport au viewport et ne bougera pas quel que soit le
+                        défilement de la page.
                     </li>
                     <li>
-                        sticky : l'élément est tout d'abord placé selon son élément parent, mais lors du défillement vers le bas, bougera jusqu'à la déisparition du viewport de l'élément parent, ensuite, il reste en haut du viewport avec le décalage indiqué par rapport à son élément parent.
+                        sticky : l'élément est tout d'abord placé selon son élément parent, mais lors du défillement
+                        vers le bas, bougera jusqu'à la déisparition du viewport de l'élément parent, ensuite, il reste
+                        en haut du viewport avec le décalage indiqué par rapport à son élément parent.
                     </li>
                 </ul>
                 <style>
-                    .exemple-position{
+                    .exemple-position {
                         width: 300px;
                         height: 300px;
                         border: 3px solid black;
                         position: relative;
                     }
+
                     /* En css, on essai d'appliquer le principe D.R.Y. => Don't Repeat Yourself */
-                    .carre-rouge, 
-                    .carre-vert{
+                    .carre-rouge,
+                    .carre-vert {
                         width: 50px;
                         height: 50px;
                     }
 
-                    .carre-rouge{
+                    .carre-rouge {
                         background-color: rgba(139, 0, 0, 0.5);
                         position: absolute;
                         top: 15px;
                         left: 15px;
                     }
-                    
-                    .carre-vert{
+
+                    .carre-vert {
                         background-color: rgba(0, 100, 0, 0.5);
                     }
-
                 </style>
                 <div class="exemple-position">
                     <div class="carre-rouge"></div>
                     <div class="carre-vert"></div>
+                </div>
+                <style>
+                    /* HTML: <div class="ribbon">Your text content</div> */
+                    .ribbon {
+                        font-size: 28px;
+                        font-weight: bold;
+                        color: #fff;
+                    }
+
+                    .ribbon {
+                        --f: .5em;
+                        /* control the folded part */
+
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        line-height: 1.8;
+                        padding-inline: 1lh;
+                        padding-bottom: var(--f);
+                        border-image: conic-gradient(#0008 0 0) 51%/var(--f);
+                        clip-path: polygon(100% calc(100% - var(--f)), 100% 100%, calc(100% - var(--f)) calc(100% - var(--f)), var(--f) calc(100% - var(--f)), 0 100%, 0 calc(100% - var(--f)), 999px calc(100% - var(--f) - 999px), calc(100% - 999px) calc(100% - var(--f) - 999px));
+                        transform: translate(calc((cos(45deg) - 1)*100%), -100%) rotate(-45deg);
+                        transform-origin: 100% 100%;
+                        background-color: #F07818;
+                        /* the main color  */
+                    }
+                </style>
+                <div style="position: relative; height: 200px;width: 300px;margin: 1rem;border: 3px solid black ">
+                    <div class="ribbon">PROMO !</div>
                 </div>
                 <footer>
                     <a href="#">Lire plus</a>
