@@ -146,16 +146,30 @@ video{
   max-width: 100%;
 }
 
-figure{
+figure:not(figure.video){
   padding-top: calc( 2 * var(--gutter));
   text-align: center;
   background-color: var(--site-banner-bg-color);
 }
 
-figure > figcaption{
+figure:not(figure.video) > figcaption{
   text-align: left;
   color: var(--site-banner-color);
   margin: var(--gutter);
+}
+
+figure.video{
+  position:relative;
+  padding-bottom:56.25%;
+  height:0;
+  overflow:hidden;
+}
+
+figure.video > iframe{
+  position: absolute; 
+  width: 100%; 
+  height: 100%; 
+  border: none;
 }
 
 button{
