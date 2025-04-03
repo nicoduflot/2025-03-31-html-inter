@@ -146,6 +146,7 @@ img{
 }
 
 figure{
+  padding-top: calc( 2 * var(--gutter));
   text-align: center;
   background-color: var(--site-banner-bg-color);
 }
@@ -154,6 +155,24 @@ figure > figcaption{
   text-align: left;
   color: var(--site-banner-color);
   margin: var(--gutter);
+}
+
+button{
+  border: 2px solid var(--site-banner-color);
+  background-color: var(--site-banner-bg-color);
+  color: var(--site-banner-color);
+  margin: var(--gutter);
+  border-radius: var(--gutter);
+  padding-left: var(--gutter) ;
+  padding-right: var(--gutter) ;
+}
+
+button:hover,
+button:focus,
+button:focus-visible{
+  cursor: pointer;
+  background-color: var(--site-banner-color);
+  color: var(--site-banner-bg-color);
 }
 
 /* déclaration de classes */
@@ -265,7 +284,7 @@ nav.tdm {
   }
 
   figure{
-    width: 50vw;
+    max-width: 50vw;
     margin-left: auto;
     margin-right: auto;
   }
@@ -300,7 +319,7 @@ nav.tdm {
   }
 
   figure{
-    width: 33.33333vw;
+    max-width: 33.33333vw;
   }
 
 }
