@@ -134,12 +134,14 @@ ATTENTION, si on importe des css dauns un fichier CSS, il est OBLIGATOIRE de le 
   --gutter: 0.5rem;
   --site-banner-bg-color: #333333;
   --site-banner-color: white;
+  --site-banner-color-50: rgba(255, 255, 255, 0.5);
   --site-banner-link-color: orange;
   --site-main-link-color: darkred;
   --info-border-color: rgb(104, 104, 247);
   --info-background-color: lightblue;
   --warning-border-color: darkorange;
   --warning-background-color: rgb(254, 207, 120);
+  --input-background-color: rgb(104, 104, 104);
 }
 /* le sélecteur * correspond à n'importe quel suite de caractères, donc représente tous les sélecteurs de la page, donc impacte tous les élements présents dans la page */
 * {
@@ -220,6 +222,36 @@ fieldset{
   margin-left: var(--gutter);
   margin-right: var(--gutter);
 }
+
+input[type="text"], 
+input[type="email"],
+select, textarea
+{
+  line-height: 1.8rem;
+  font-size: 1rem;
+  padding-left: var(--gutter);
+  padding-right: var(--gutter);
+  border-radius: var(--gutter);
+  border: 1px solid var(--site-banner-color);
+  background-color: var(--input-background-color);
+  color: var(--site-banner-color);
+}
+select{
+  height: 1.8rem;
+}
+
+input[type="text"]::placeholder,
+input[type="email"]::placeholder{
+  color: var(--site-banner-color-50);
+}
+
+textarea{
+  display: block;
+  width: 100%;
+  height: 200px;
+}
+
+
 
 /* déclaration de classes */
 
@@ -371,6 +403,12 @@ nav.tdm {
 
   figure{
     max-width: 50vw;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  main article form{
+    width: calc( 720px - ( 2 * var(--gutter)) );
     margin-left: auto;
     margin-right: auto;
   }
