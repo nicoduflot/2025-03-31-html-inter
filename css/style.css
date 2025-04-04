@@ -190,6 +190,21 @@ button:focus-visible{
   color: var(--site-banner-bg-color);
 }
 
+form{
+  background-color: var(--site-banner-bg-color);
+  color: var(--site-banner-color);
+  padding: var(--gutter);
+  border-radius: var(--gutter);
+}
+
+fieldset{
+  border-style: solid;
+  border-color: var(--site-banner-color);
+  border-radius: var(--gutter);
+  margin-left: var(--gutter);
+  margin-right: var(--gutter);
+}
+
 /* déclaration de classes */
 
 .deuxEm {
