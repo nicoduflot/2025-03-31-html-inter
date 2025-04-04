@@ -6,7 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Formation HTML CSS RWD</title>
     <link rel="stylesheet" href="./css/style.css" />
-    <link rel="stylesheet" href="./css/bootstrap-icons.css" />
 </head>
 
 <body id="top">
@@ -66,6 +65,61 @@
                         <legend>
                             Civilité
                         </legend>
+                        <p>
+                            <label for="nom">Nom</label> : <input type="text" name="nom" id="nom" placeholder="Votre nom ici" aria-describedby="info-nom" required />
+                        </p>
+                        <div id="info-nom" class="alert alert-info">
+                            Ce champ doit contenir votre nom d'usage, il est obligatoire.
+                        </div>
+                        <div id="alert-nom" class="alert alert-warning">
+                            Vous devez remplir ce champ pour soumettre le formulaire.
+                        </div>
+                        <p>
+                            <label for="email">Email</label> : <input type="text" name="email" id="email" placeholder="Votre email ici" aria-describedby="info-email" required />
+                        </p>
+                        <div id="info-email" class="alert alert-info">
+                            Ce champ doit contenir votre email de contact, il est obligatoire.
+                        </div>
+                    </fieldset>
+                    <fieldset>
+                        <legend>Description de votre demande</legend>
+                        <p>
+                            <label for="type-demande">Type de la demande</label>
+                            <select name="type-demande" id="type-demande" aria-describedby="info-type-demande" required>
+                                <option value="" selected>Choisir le type de la demande</option>
+                                <optgroup label="Options unitaires">
+                                    <option value="1">Opt 1</option>
+                                    <option value="2">Opt 2</option>
+                                    <option value="3">Opt 3</option>
+                                    <option value="4">Opt 4</option>
+                                    <option value="5">Opt 5</option>
+                                </optgroup>
+                                <optgroup label="Regroupement d'options">
+                                    <option value="6">Tout sauf l'option 1</option>
+                                    <option value="7">Tout sauf l'option 2</option>
+                                    <option value="8">Tout sauf l'option 3</option>
+                                </optgroup>
+                            </select>
+                        </p>
+                        <div class="alert alert-info" id="info-type-demande">
+                            Vous devez sélectionner le type de la demande, ce champ est obligatoire.
+                        </div>
+                        <p>
+                            Vous représentez :
+                        </p>
+                        <p class="form-check-radio">
+                            <input type="radio" name="personne" id="physique" value="physique" checked aria-describedby="info-personne" /> <label for="physique">Personne Physique</label><br />
+                            <input type="radio" name="personne" id="morale" value="morale" aria-describedby="info-personne" /> <label for="morale">Personne Morale</label>
+                        </p>
+                        <div class="alert alert-info" id="info-personne">
+                            Votre demande est faîte pour un particulier (personne physique) ou une institution, asso, entreprise, etc(Personne Morale).
+                        </div>
+                        <p class="form-check-radio">
+                            <input type="checkbox" name="diff-email" id="diff-email" aria-describedby="info-diff" /> <label for="diff-email">Campagne d'emailing</label><br/>
+                            <input type="checkbox" name="diff-tel" id="diff-tel" aria-describedby="info-diff" /> <label for="diff-tel">Télé-opérateurs</label><br/>
+                            <input type="checkbox" name="diff-radio" id="diff-radio" aria-describedby="info-diff" /> <label for="diff-radio">Publicités radiophoniques</label><br/>
+                            <input type="checkbox" name="diff-tv" id="diff-tv" aria-describedby="info-diff" /> <label for="diff-tv">Publicités télévisuelles</label><br/>
+                        </p>
                     </fieldset>
                     <p>
                         <button type="submit">Envoyer</button> <button type="reset">Vider le formulaire</button>

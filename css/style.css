@@ -113,6 +113,18 @@ sélecteur CSS :
 
 */
 
+/* 
+il est possible d'importer des feuillet CSS dans un feuillet pour profiter des stylés déclarés 
+
+Par exemple, on a créé un fichier qui ajoute des police de caractère, plutôt que de le charger dans la page, 
+si on utilise les police dans toutes les page, on la charge dans le CSS principal
+
+ATTENTION, si on importe des css dauns un fichier CSS, il est OBLIGATOIRE de le faire dans les première déclaration, avant le root
+(les commentaires CSS ne sont pas des déclarations
+
+*/
+@import url('./bootstrap-icons.css');
+
 /* déclarations générales */
 :root {
   font-family: Arial, Helvetica, sans-serif;
@@ -124,6 +136,10 @@ sélecteur CSS :
   --site-banner-color: white;
   --site-banner-link-color: orange;
   --site-main-link-color: darkred;
+  --info-border-color: rgb(104, 104, 247);
+  --info-background-color: lightblue;
+  --warning-border-color: darkorange;
+  --warning-background-color: rgb(254, 207, 120);
 }
 /* le sélecteur * correspond à n'importe quel suite de caractères, donc représente tous les sélecteurs de la page, donc impacte tous les élements présents dans la page */
 * {
@@ -243,6 +259,46 @@ fieldset{
 
 .tableau-adaptatif {
   overflow: auto;
+}
+
+/* 
+Dans le cadre du D.R.Y. (Don't Repeat Yourself) : 
+on défini les propriétés communes à toutes les sortes d'élément de message d'alerte
+on créera des classes spécifiques pour notament la couleur des alertes selon leur type */
+.alert{
+  margin-top: calc( 0.5 * var(--gutter));
+  margin-bottom: calc( 0.5 * var(--gutter));
+  border: 3px solid transparent;
+  font-size: 0.8rem;
+  font-style: italic;
+  padding-left: calc( 0.5 * var(--gutter));
+  padding-right: calc( 0.5 * var(--gutter));
+  border-radius: var(--gutter);
+}
+
+.alert::before{
+  font-family: "bootstrap-icons";
+  font-style: normal;
+}
+
+.alert-info{
+  border-color: var(--info-border-color);
+  background-color: var(--info-background-color);
+  color: var(--site-banner-bg-color);
+}
+
+.alert-info::before {
+  content: "\f430";
+}
+
+.alert-warning{
+  border-color: var(--warning-border-color);
+  background-color: var(--warning-background-color);
+  color: var(--site-banner-bg-color);
+}
+
+.alert-warning::before {
+  content: "\f2d2";
 }
 
 /* Déclarations de structure */
